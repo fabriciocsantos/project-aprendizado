@@ -5,13 +5,24 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<meta charset="UTF-8" />
-	<title>Tela de Login</title>
+	<title>Cadastro	</title>
+	
+	<link rel="stylesheet" href="estilos/style.css"/>
 </h:head>
 <h:body>
 
 	<h:form id="frm">
 		<h1>Cadastro de contrato de treinamentos</h1>
-		<h2></h2>
+		
+		<h2>___________________________________________</h2>
+		
+		<p:panelGrid columns="2">
+		
+			<p:outputLabel value="Razão Social: " for="inpRazaoSocial"/>
+			<p:inputText id="inpRazaoSocial" value="#{telaUsuarioBean.razaoSocial}" required="true"/>
+		
+		</p:panelGrid>
+		<p:commandButton value="Cadastrar" action="#{telaUsuarioBean.cadastrar}" styleClass="btnCadastro"/>
 	</h:form>
 
 </h:body>

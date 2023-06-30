@@ -1,0 +1,13 @@
+@charset "ISO-8859-1";
+
+/*CORPO*/
+body{
+	font-family:Trebuchet MS, sans-serif;
+}	
+
+
+/*BOTÕES*/
+
+.btnCadastro{
+	margin-top:10px;
+}
