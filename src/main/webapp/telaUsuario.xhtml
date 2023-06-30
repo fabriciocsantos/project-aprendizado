@@ -20,7 +20,9 @@
 		
 			<p:outputLabel value="Razão Social: " for="inpRazaoSocial"/>
 			<p:inputText id="inpRazaoSocial" value="#{telaUsuarioBean.razaoSocial}" required="true"/>
-		
+			
+			<p:outputLabel value="CNPJ" for="inpCnpj"/>
+			<p:inputMask id="inpCnpj" value="#{telaUsuarioBean.cnpj}" required="true" mask="99.999.999/9999-99"/>
 		</p:panelGrid>
 		<p:commandButton value="Cadastrar" action="#{telaUsuarioBean.cadastrar}" styleClass="btnCadastro"/>
 	</h:form>

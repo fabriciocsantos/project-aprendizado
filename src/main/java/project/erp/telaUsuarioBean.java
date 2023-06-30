@@ -15,7 +15,7 @@ public class telaUsuarioBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String razaoSocial;
-	
+	private int cnpj;
 	
 	
 	public void cadastrar() {
@@ -24,6 +24,7 @@ public class telaUsuarioBean implements Serializable {
 	
 	public void infoCadastro() {
 		System.out.println("Razão Social: " + this.razaoSocial);
+		System.out.println("CPNJ: " + this.cnpj);
 	}
 	
 	/* Getters e Setters */
@@ -34,6 +35,14 @@ public class telaUsuarioBean implements Serializable {
 
 	public void setRazaoSocial(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
+	}
+
+	public int getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(int cnpj) {
+		this.cnpj = cnpj;
 	}	
 	
 }
