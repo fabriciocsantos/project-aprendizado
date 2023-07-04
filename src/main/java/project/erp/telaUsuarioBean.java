@@ -72,6 +72,10 @@ public class telaUsuarioBean implements Serializable {
 	
 	/* Getters e Setters */
 	
+	public Date getDataHoje() {
+		return new Date();
+	}
+	
 	public String getRazaoSocial() {
 		return razaoSocial;
 	}
