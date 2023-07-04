@@ -2,6 +2,7 @@ package project.erp;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
@@ -24,6 +25,7 @@ public class telaUsuarioBean implements Serializable {
 	private int cnpj;
 	private String cidade;
 	private String modalidade;
+	private Date dataContrato;
 	
 	public telaUsuarioBean() {
 		cidades.add("Belo Horizonte");
@@ -63,6 +65,7 @@ public class telaUsuarioBean implements Serializable {
 		System.out.println("CPNJ: " + this.cnpj);
 		System.out.println("Cidade de contrato: " + this.cidade);
 		System.out.println("Modalidade: " + this.modalidade);
+		System.out.println("Data do contrato: " + this.dataContrato);
 	}
 	
 	/* Getters e Setters */
@@ -97,6 +100,14 @@ public class telaUsuarioBean implements Serializable {
 
 	public void setModalidade(String modalidade) {
 		this.modalidade = modalidade;
+	}
+
+	public Date getDataContrato() {
+		return dataContrato;
+	}
+
+	public void setDataContrato(Date dataContrato) {
+		this.dataContrato = dataContrato;
 	}
 	
 }
