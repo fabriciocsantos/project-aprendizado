@@ -26,6 +26,7 @@ public class telaUsuarioBean implements Serializable {
 	private String cidade;
 	private String modalidade;
 	private Date dataContrato;
+	private String metodoPagamento;
 	
 	public telaUsuarioBean() {
 		cidades.add("Belo Horizonte");
@@ -66,6 +67,7 @@ public class telaUsuarioBean implements Serializable {
 		System.out.println("Cidade de contrato: " + this.cidade);
 		System.out.println("Modalidade: " + this.modalidade);
 		System.out.println("Data do contrato: " + this.dataContrato);
+		System.out.println("Método de pagemento: " + this.metodoPagamento);
 	}
 	
 	/* Getters e Setters */
@@ -108,6 +110,14 @@ public class telaUsuarioBean implements Serializable {
 
 	public void setDataContrato(Date dataContrato) {
 		this.dataContrato = dataContrato;
+	}
+
+	public String getMetodoPagamento() {
+		return metodoPagamento;
+	}
+
+	public void setMetodoPagamento(String metodoPagamento) {
+		this.metodoPagamento = metodoPagamento;
 	}
 	
 }

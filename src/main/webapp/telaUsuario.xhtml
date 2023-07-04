@@ -46,6 +46,13 @@
 			<p:calendar id="dataContrato" value="#{telaUsuarioBean.dataContrato}" required="true" 
 			pattern="dd/MM/yyyy" readonly="true" navigator="false" pages="1"/>
 			
+			<p:outputLabel value="Método de pagamento" for="metodoPagamento"/>
+			<p:selectOneMenu id="metodoPagamento" value="#{telaUsuarioBean.metodoPagamento}" required="true">
+			    <f:selectItem itemLabel="Cartão de crédito" itemValue="1" />
+			    <f:selectItem itemLabel="Cheque" itemValue="2" />
+			    <f:selectItem itemLabel="Boleto" itemValue="3" />
+			</p:selectOneMenu>
+			
 		</p:panelGrid>
 		<p:commandButton value="Cadastrar" action="#{telaUsuarioBean.cadastrar}" styleClass="btnCadastro" update="@form"/>
 	</h:form>
