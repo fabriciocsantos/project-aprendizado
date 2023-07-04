@@ -8,6 +8,12 @@
 	<title>Cadastro	</title>
 	
 	<link rel="stylesheet" href="estilos/style.css"/>
+	<style>
+		.sem-bordas td{
+			border:none;
+			padding:5px;
+		}
+	</style>
 </h:head>
 <h:body>
 
@@ -28,6 +34,13 @@
 			<p:autoComplete id="pais" value="#{telaUsuarioBean.cidade}" required="true"
 				completeMethod="#{telaUsuarioBean.sugerirCidades}"
 				forceSelection="true" minQueryLength="1" dropdown="true" scrollHeight="200"/>
+				
+			<p:outputLabel value="Modalidade" for="modalidade"/>
+			<p:selectOneRadio id="modalidade" value="#{telaUsuarioBean.modalidade}" required="true"
+			styleClass="sem-bordas">
+				<f:selectItem itemLabel="EAD" itemValue="Ead"/>
+				<f:selectItem itemLabel="Presencial" itemValue="Presencial"/>
+			</p:selectOneRadio>
 			
 		</p:panelGrid>
 		<p:commandButton value="Cadastrar" action="#{telaUsuarioBean.cadastrar}" styleClass="btnCadastro" update="@form"/>

@@ -23,6 +23,7 @@ public class telaUsuarioBean implements Serializable {
 	private String razaoSocial;
 	private int cnpj;
 	private String cidade;
+	private String modalidade;
 	
 	public telaUsuarioBean() {
 		cidades.add("Belo Horizonte");
@@ -61,6 +62,7 @@ public class telaUsuarioBean implements Serializable {
 		System.out.println("Razão Social: " + this.razaoSocial);
 		System.out.println("CPNJ: " + this.cnpj);
 		System.out.println("Cidade de contrato: " + this.cidade);
+		System.out.println("Modalidade: " + this.modalidade);
 	}
 	
 	/* Getters e Setters */
@@ -87,6 +89,14 @@ public class telaUsuarioBean implements Serializable {
 
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+
+	public String getModalidade() {
+		return modalidade;
+	}
+
+	public void setModalidade(String modalidade) {
+		this.modalidade = modalidade;
 	}
 	
 }
