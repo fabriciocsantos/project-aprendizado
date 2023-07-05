@@ -22,7 +22,7 @@ public class telaUsuarioBean implements Serializable {
 	private List<String> cidades = new ArrayList<String>();
 	
 	private String razaoSocial;
-	private int cnpj;
+	private String cnpj;
 	private String cidade;
 	private String modalidade;
 	private Date dataContrato;
@@ -90,11 +90,11 @@ public class telaUsuarioBean implements Serializable {
 		this.razaoSocial = razaoSocial;
 	}
 
-	public int getCnpj() {
+	public String getCnpj() {
 		return cnpj;
 	}
 
-	public void setCnpj(int cnpj) {
+	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
 	}
 
