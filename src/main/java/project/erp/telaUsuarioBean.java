@@ -26,7 +26,8 @@ public class telaUsuarioBean implements Serializable {
 	private String cidade;
 	private String modalidade;
 	private Date dataContrato;
-	private String metodoPagamento;
+	private int metodoPagamento;
+	private List<String> checkBoxCursos;
 	
 	public telaUsuarioBean() {
 		cidades.add("Belo Horizonte");
@@ -67,8 +68,13 @@ public class telaUsuarioBean implements Serializable {
 		System.out.println("Cidade de contrato: " + this.cidade);
 		System.out.println("Modalidade: " + this.modalidade);
 		System.out.println("Data do contrato: " + this.dataContrato);
-		System.out.println("Método de pagemento: " + this.metodoPagamento);
+		System.out.println("Método de pagamento: " + this.metodoPagamento);
+		
+		for(String seleçãoCursos: checkBoxCursos) {
+			System.out.println("Curso Contratado: " + seleçãoCursos);
+		}
 	}
+	
 	
 	/* Getters e Setters */
 	
@@ -116,12 +122,20 @@ public class telaUsuarioBean implements Serializable {
 		this.dataContrato = dataContrato;
 	}
 
-	public String getMetodoPagamento() {
+	public int getMetodoPagamento() {
 		return metodoPagamento;
 	}
 
-	public void setMetodoPagamento(String metodoPagamento) {
+	public void setMetodoPagamento(int metodoPagamento) {
 		this.metodoPagamento = metodoPagamento;
+	}
+
+	public List<String> getCheckBoxCursos() {
+		return checkBoxCursos;
+	}
+
+	public void setCheckBoxCursos(List<String> checkBoxCursos) {
+		this.checkBoxCursos = checkBoxCursos;
 	}
 	
 }
